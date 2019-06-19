@@ -18,11 +18,11 @@ export const getPeople = () => dispatch => {
       console.log(res),
         dispatch({
           type: SUCCESS,
-          payload: res.data
+          payload: res.data.results
         });
     })
     .catch(rej => {
-      console.log(rej),
+     console.log(rej),
         dispatch({
           type: FAILURE,
           payload: rej.response
